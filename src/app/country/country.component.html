@@ -1,0 +1,19 @@
+<p>
+  country works!
+</p>
+
+<ul #ulist id="teams">  
+    <li *ngFor="let team of teams" id="list">
+        {{team.teamName}} - {{team.teamTournaments}}
+        <button (click)=removeTeam([(team)])>Eliminar</button>
+        <button (click)=addOperation(ulist)>Agregar</button>
+    </li>
+</ul>
+
+<label>Nombre</label>
+<input [(ngModel)]="newTeam.teamName">
+<label >Campeonatos</label>
+<input [(ngModel)]="newTeam.teamTournaments">
+
+<button (click)=addTeam()>Agregar</button>
+
